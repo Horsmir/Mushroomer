@@ -1,0 +1,229 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://src/grounds/forest_tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/objects/WhiteMushroom.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/bg_forest/Sky.png" type="Texture" id=4]
+[ext_resource path="res://assets/bg_forest/Middle_Decor.png" type="Texture" id=5]
+[ext_resource path="res://assets/bg_forest/Foreground.png" type="Texture" id=6]
+[ext_resource path="res://assets/bg_forest/Ground.png" type="Texture" id=7]
+[ext_resource path="res://src/objects/Fly-agaric.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/objects/DeadTree.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/actors/Wolf_01.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/user_interface/UserInterface.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/objects/Fly-agaric_01.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/objects/WhiteMushroom_01.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/objects/Fly-agaric_02.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/objects/WhiteMushroom_02.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/objects/DeadTree01.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/objects/Portal.tscn" type="PackedScene" id=18]
+[ext_resource path="res://src/screens/EndScreen.tscn" type="PackedScene" id=19]
+[ext_resource path="res://assets/music/Sound_02855.ogg" type="AudioStream" id=20]
+[ext_resource path="res://assets/bg_forest/BG_Decor.png" type="Texture" id=21]
+[ext_resource path="res://src/objects/PlatformSmall.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/objects/Back01.tscn" type="PackedScene" id=23]
+[ext_resource path="res://src/objects/DeadTree02.tscn" type="PackedScene" id=24]
+[ext_resource path="res://src/objects/Stone01.tscn" type="PackedScene" id=25]
+[ext_resource path="res://src/objects/DeadTree03.tscn" type="PackedScene" id=26]
+[ext_resource path="res://src/objects/Grass_01.tscn" type="PackedScene" id=27]
+[ext_resource path="res://src/objects/Grass_02.tscn" type="PackedScene" id=28]
+
+[node name="Level01" type="Node2D"]
+
+[node name="UserInterface" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="UserInterface" parent="UserInterface" instance=ExtResource( 12 )]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0, 0 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 960, 540 )
+texture = ExtResource( 4 )
+
+[node name="ParallaxBackground5" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.25, 0.25 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground5"]
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground5/ParallaxLayer"]
+position = Vector2( 960, 540 )
+texture = ExtResource( 21 )
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.5, 0.5 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 960, 540 )
+texture = ExtResource( 5 )
+
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.75, 0.75 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground3"]
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground3/ParallaxLayer"]
+position = Vector2( 960, 540 )
+texture = ExtResource( 6 )
+
+[node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground4"]
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground4/ParallaxLayer"]
+position = Vector2( 960, 540 )
+texture = ExtResource( 7 )
+
+[node name="Back01" parent="." instance=ExtResource( 23 )]
+position = Vector2( 8836.68, 1326.53 )
+
+[node name="Back02" parent="." instance=ExtResource( 23 )]
+position = Vector2( 11647.9, 1326.53 )
+
+[node name="Back03" parent="." instance=ExtResource( 23 )]
+position = Vector2( 12159.5, 1326.53 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 128, 128 )
+collision_layer = 8
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -131014, 0, 0, -131013, 1, 0, -131012, 1, 0, -131011, 2, 0, -65480, 0, 0, -65479, 18, 0, -65478, 7, 0, -65477, 4, 0, -65476, 4, 0, -65475, 5, 0, 54, 0, 0, 55, 18, 0, 56, 7, 0, 57, 4, 0, 58, 4, 0, 59, 4, 0, 60, 4, 0, 61, 5, 0, 65585, 12, 0, 65586, 13, 0, 65587, 13, 0, 65588, 14, 0, 65590, 11, 0, 65591, 8, 0, 65592, 8, 0, 65593, 8, 0, 65594, 8, 0, 65595, 8, 0, 65596, 8, 0, 65597, 15, 0, 65599, 12, 0, 65600, 13, 0, 65601, 13, 0, 65602, 14, 0, 196607, 1, 0, 131072, 2, 0, 131108, 12, 0, 131109, 13, 0, 131110, 13, 0, 131111, 13, 0, 131112, 14, 0, 262143, 4, 0, 196608, 5, 0, 196640, 12, 0, 196641, 13, 0, 196642, 14, 0, 196674, 12, 0, 196675, 13, 0, 196676, 13, 0, 196677, 13, 0, 196678, 14, 0, 327679, 4, 0, 262144, 5, 0, 262165, 0, 0, 262166, 1, 0, 262167, 1, 0, 262168, 1, 0, 262169, 2, 0, 262171, 12, 0, 262172, 13, 0, 262173, 13, 0, 262174, 14, 0, 262220, 0, 0, 262221, 2, 0, 262223, 12, 0, 262224, 13, 0, 262225, 14, 0, 393215, 4, 0, 327680, 5, 0, 327698, 0, 0, 327699, 2, 0, 327701, 11, 0, 327702, 8, 0, 327703, 8, 0, 327704, 8, 0, 327705, 15, 0, 327711, 12, 0, 327712, 13, 0, 327713, 13, 0, 327714, 14, 0, 327721, 0, 0, 327722, 1, 0, 327723, 1, 0, 327724, 2, 0, 327754, 0, 0, 327755, 18, 0, 327756, 7, 0, 327757, 5, 0, 327762, 12, 0, 327763, 14, 0, 458751, 4, 0, 393216, 5, 0, 393233, 0, 0, 393234, 7, 0, 393235, 5, 0, 393252, 12, 0, 393253, 13, 0, 393254, 13, 0, 393255, 14, 0, 393257, 3, 0, 393258, 4, 0, 393259, 4, 0, 393260, 9, 0, 393261, 2, 0, 393288, 0, 0, 393289, 18, 0, 393290, 7, 0, 393291, 4, 0, 393292, 4, 0, 393293, 9, 0, 393294, 10, 0, 393295, 1, 0, 393296, 2, 0, 393300, 12, 0, 393301, 13, 0, 393302, 13, 0, 393303, 14, 0, 524287, 4, 0, 458752, 5, 0, 458768, 0, 0, 458769, 7, 0, 458770, 4, 0, 458771, 9, 0, 458772, 10, 0, 458773, 2, 0, 458785, 0, 0, 458786, 2, 0, 458793, 3, 0, 458794, 4, 0, 458795, 4, 0, 458796, 4, 0, 458797, 9, 0, 458798, 10, 0, 458799, 1, 0, 458800, 1, 0, 458801, 2, 0, 458810, 0, 0, 458811, 1, 0, 458812, 1, 0, 458813, 1, 0, 458814, 1, 0, 458815, 1, 0, 458816, 1, 0, 458817, 1, 0, 458818, 1, 0, 458819, 2, 0, 458822, 0, 0, 458823, 18, 0, 458824, 7, 0, 458825, 4, 0, 458826, 4, 0, 458827, 4, 0, 458828, 4, 0, 458829, 4, 0, 458830, 4, 0, 458831, 4, 0, 458832, 9, 0, 458833, 10, 0, 458834, 2, 0, 589823, 4, 0, 524288, 9, 0, 524289, 10, 0, 524290, 1, 0, 524291, 1, 0, 524292, 1, 0, 524293, 1, 0, 524294, 1, 0, 524295, 1, 0, 524296, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 18, 0, 524304, 7, 0, 524305, 4, 0, 524306, 4, 0, 524307, 4, 0, 524308, 4, 0, 524309, 9, 0, 524310, 10, 0, 524311, 1, 0, 524312, 1, 0, 524313, 1, 0, 524314, 1, 0, 524315, 1, 0, 524316, 1, 0, 524317, 1, 0, 524318, 1, 0, 524319, 1, 0, 524320, 18, 0, 524321, 7, 0, 524322, 9, 0, 524323, 10, 0, 524324, 1, 0, 524325, 1, 0, 524326, 1, 0, 524327, 1, 0, 524328, 18, 0, 524329, 7, 0, 524330, 4, 0, 524331, 4, 0, 524332, 4, 0, 524333, 4, 0, 524334, 4, 0, 524335, 4, 0, 524336, 4, 0, 524337, 9, 0, 524338, 10, 0, 524339, 1, 0, 524340, 1, 0, 524341, 1, 0, 524342, 1, 0, 524343, 1, 0, 524344, 1, 0, 524345, 18, 0, 524346, 7, 0, 524347, 4, 0, 524348, 4, 0, 524349, 4, 0, 524350, 4, 0, 524351, 4, 0, 524352, 4, 0, 524353, 4, 0, 524354, 4, 0, 524355, 5, 0, 524358, 3, 0, 524359, 4, 0, 524360, 4, 0, 524361, 4, 0, 524362, 4, 0, 524363, 4, 0, 524364, 4, 0, 524365, 4, 0, 524366, 4, 0, 524367, 4, 0, 524368, 4, 0, 524369, 4, 0, 524370, 9, 0, 524371, 10, 0, 524372, 1, 0, 524373, 1, 0, 524374, 1, 0, 524375, 1, 0, 524376, 1, 0, 524377, 1, 0, 524378, 2, 0, 524383, 0, 0, 524384, 1, 0, 524385, 1, 0, 524386, 1, 0, 524387, 1, 0, 524388, 1, 0, 524389, 1, 0, 524390, 1, 0, 524391, 1, 0, 655359, 4, 0, 589824, 4, 0, 589825, 4, 0, 589826, 4, 0, 589827, 4, 0, 589828, 4, 0, 589829, 4, 0, 589830, 4, 0, 589831, 4, 0, 589832, 4, 0, 589833, 4, 0, 589834, 4, 0, 589835, 4, 0, 589836, 4, 0, 589837, 4, 0, 589838, 4, 0, 589839, 4, 0, 589840, 4, 0, 589841, 4, 0, 589842, 4, 0, 589843, 4, 0, 589844, 4, 0, 589845, 4, 0, 589846, 4, 0, 589847, 4, 0, 589848, 4, 0, 589849, 4, 0, 589850, 4, 0, 589851, 4, 0, 589852, 4, 0, 589853, 4, 0, 589854, 4, 0, 589855, 4, 0, 589856, 4, 0, 589857, 4, 0, 589858, 4, 0, 589859, 4, 0, 589860, 4, 0, 589861, 4, 0, 589862, 4, 0, 589863, 4, 0, 589864, 4, 0, 589865, 4, 0, 589866, 4, 0, 589867, 4, 0, 589868, 4, 0, 589869, 4, 0, 589870, 4, 0, 589871, 4, 0, 589872, 4, 0, 589873, 4, 0, 589874, 4, 0, 589875, 4, 0, 589876, 4, 0, 589877, 4, 0, 589878, 4, 0, 589879, 4, 0, 589880, 4, 0, 589881, 4, 0, 589882, 4, 0, 589883, 4, 0, 589884, 4, 0, 589885, 4, 0, 589886, 4, 0, 589887, 4, 0, 589888, 4, 0, 589889, 4, 0, 589890, 4, 0, 589891, 5, 0, 589894, 3, 0, 589895, 4, 0, 589896, 4, 0, 589897, 4, 0, 589898, 4, 0, 589899, 4, 0, 589900, 4, 0, 589901, 4, 0, 589902, 4, 0, 589903, 4, 0, 589904, 4, 0, 589905, 4, 0, 589906, 4, 0, 589907, 4, 0, 589908, 4, 0, 589909, 4, 0, 589910, 4, 0, 589911, 4, 0, 589912, 4, 0, 589913, 4, 0, 589914, 5, 0, 589919, 3, 0, 589920, 4, 0, 589921, 4, 0, 589922, 4, 0, 589923, 4, 0, 589924, 4, 0, 589925, 4, 0, 589926, 4, 0, 589927, 4, 0 )
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="WhiteMushroom" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 1071.29, 993.123 )
+rotation = 2.89599e-05
+
+[node name="WhiteMushroom5" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 4134.18, 355.326 )
+rotation = 2.89599e-05
+
+[node name="WhiteMushroom9" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 5038.34, 225.686 )
+rotation = 2.89599e-05
+
+[node name="WhiteMushroom11" parent="Coins" instance=ExtResource( 3 )]
+position = Vector2( 5922.55, 870.56 )
+rotation = 2.89599e-05
+
+[node name="Fly-agaric" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 3023.25, 483.766 )
+
+[node name="Fly-agaric2" parent="Coins" instance=ExtResource( 15 )]
+position = Vector2( 1984.78, 992.941 )
+
+[node name="Fly-agaric5" parent="Coins" instance=ExtResource( 15 )]
+position = Vector2( 6154.3, 868.841 )
+
+[node name="Fly-agaric6" parent="Coins" instance=ExtResource( 15 )]
+position = Vector2( 6476.74, 999.589 )
+
+[node name="WhiteMushroom2" parent="Coins" instance=ExtResource( 14 )]
+position = Vector2( 2777.61, 864.202 )
+
+[node name="WhiteMushroom3" parent="Coins" instance=ExtResource( 14 )]
+position = Vector2( 4029.37, 994.89 )
+
+[node name="WhiteMushroom6" parent="Coins" instance=ExtResource( 14 )]
+position = Vector2( 4931.31, 738.935 )
+
+[node name="WhiteMushroom12" parent="Coins" instance=ExtResource( 14 )]
+position = Vector2( 6701.94, 999.323 )
+
+[node name="WhiteMushroom13" parent="Coins" instance=ExtResource( 14 )]
+position = Vector2( 7219.39, 997.107 )
+
+[node name="WhiteMushroom8" parent="Coins" instance=ExtResource( 14 )]
+position = Vector2( 4804.99, 227.025 )
+
+[node name="WhiteMushroom4" parent="Coins" instance=ExtResource( 16 )]
+position = Vector2( 3042.06, 992.175 )
+
+[node name="WhiteMushroom14" parent="Coins" instance=ExtResource( 16 )]
+position = Vector2( 3711.53, 484.808 )
+
+[node name="WhiteMushroom7" parent="Coins" instance=ExtResource( 16 )]
+position = Vector2( 4514.64, 995.499 )
+
+[node name="WhiteMushroom10" parent="Coins" instance=ExtResource( 16 )]
+position = Vector2( 5370.04, 617.66 )
+
+[node name="Fly-agaric3" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 4047.77, 611.061 )
+
+[node name="Fly-agaric4" parent="Coins" instance=ExtResource( 13 )]
+position = Vector2( 5136.96, 226.575 )
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="DeadTree" parent="Objects" instance=ExtResource( 9 )]
+position = Vector2( 1184.16, 988.746 )
+
+[node name="DeadTree01" parent="Objects" instance=ExtResource( 17 )]
+position = Vector2( 7034.15, 989.674 )
+
+[node name="DeadTree02" parent="Objects" instance=ExtResource( 24 )]
+position = Vector2( 11948.5, 889.51 )
+
+[node name="Stone01" parent="Objects" instance=ExtResource( 25 )]
+position = Vector2( 3136.96, 480.396 )
+
+[node name="DeadTree03" parent="Objects" instance=ExtResource( 26 )]
+position = Vector2( 8097.78, 726.133 )
+
+[node name="Grass_01" parent="Objects" instance=ExtResource( 27 )]
+position = Vector2( 2858, 981.999 )
+
+[node name="Grass_01_02" parent="Objects" instance=ExtResource( 27 )]
+position = Vector2( 4184, 979.999 )
+
+[node name="Grass_01_03" parent="Objects" instance=ExtResource( 27 )]
+position = Vector2( 3265, 471 )
+
+[node name="Grass_01_04" parent="Objects" instance=ExtResource( 27 )]
+position = Vector2( 2961, 471 )
+
+[node name="Grass_02" parent="Objects" instance=ExtResource( 28 )]
+position = Vector2( 2745.69, 482.489 )
+
+[node name="Grass_02_01" parent="Objects" instance=ExtResource( 28 )]
+position = Vector2( 2521.7, 609.552 )
+
+[node name="Grass_02_02" parent="Objects" instance=ExtResource( 28 )]
+position = Vector2( 3085.33, 990.74 )
+
+[node name="Grass_02_03" parent="Objects" instance=ExtResource( 28 )]
+position = Vector2( 3985.58, 991.597 )
+
+[node name="Grass_02_04" parent="Objects" instance=ExtResource( 28 )]
+position = Vector2( 4084.17, 992.455 )
+
+[node name="Wolf_01" parent="." instance=ExtResource( 10 )]
+position = Vector2( 3817.69, 883.142 )
+speed = 200
+
+[node name="Portal" parent="." instance=ExtResource( 18 )]
+position = Vector2( 13165.2, 939.339 )
+next_scene = ExtResource( 19 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 288.299, 902.816 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+autoplay = true
+
+[node name="PlatformSmall" parent="." instance=ExtResource( 22 )]
+position = Vector2( 5440, 320 )

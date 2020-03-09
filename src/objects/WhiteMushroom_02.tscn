@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/objects/Mushroom.gd" type="Script" id=1]
+[ext_resource path="res://src/animations/Mushroom.anim" type="Animation" id=2]
+[ext_resource path="res://assets/mushrooms/mushroom06.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 28.4326, 28.0869 )
+
+[node name="WhiteMushroom" type="Area2D" groups=[
+"hurtbox",
+]]
+rotation = 12.5664
+collision_layer = 4
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 4.6329 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/take = ExtResource( 2 )
