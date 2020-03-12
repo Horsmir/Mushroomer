@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/user_interface/ContinueButton.gd" type="Script" id=1]
+
+[node name="ContinueButton" type="Button"]
+margin_top = 47.0
+margin_right = 325.0
+margin_bottom = 80.0
+disabled = true
+text = "Продолжить"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="." to="." method="_on_button_up"]

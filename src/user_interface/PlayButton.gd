@@ -9,6 +9,7 @@ func _on_button_up():
     if get_tree().paused:
         get_tree().paused = false
         PlayerData.reset()
+        PlayerData.current_level_path = next_scene_path
     get_tree().change_scene(next_scene_path)
 
 

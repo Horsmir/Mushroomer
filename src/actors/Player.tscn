@@ -280,6 +280,7 @@ friction = 0.2
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 limit_left = 0
+limit_right = 20000
 limit_bottom = 1250
 limit_smoothed = true
 
@@ -288,7 +289,7 @@ scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 20 )
 vframes = 7
 hframes = 10
-frame = 11
+frame = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -9.4466, -8.01101 )

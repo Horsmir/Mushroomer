@@ -2,7 +2,7 @@
 
 [ext_resource path="res://src/screens/EndScreen.gd" type="Script" id=1]
 [ext_resource path="res://assets/bg_forest/Cartoon_Forest_BG_03.png" type="Texture" id=2]
-[ext_resource path="res://assets/themes/ui_theme.tres" type="Theme" id=4]
+[ext_resource path="res://assets/themes/ui_theme_01.tres" type="Theme" id=3]
 [ext_resource path="res://src/user_interface/QuitButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/user_interface/ChangeSceneButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/user_interface/Title.tscn" type="PackedScene" id=7]
@@ -10,7 +10,7 @@
 [node name="EndScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource( 4 )
+theme = ExtResource( 3 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

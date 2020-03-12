@@ -18,4 +18,6 @@ func _get_configuration_warning():
 func teleport():
     anim_player.play("fade_in")
     yield(anim_player, "animation_finished")
+    PlayerData.current_level_path = next_scene.get_path()
+    PlayerData.save_game()
     get_tree().change_scene_to(next_scene)
