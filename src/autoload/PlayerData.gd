@@ -13,6 +13,10 @@ var deaths = 0 setget set_deaths
 var mush_edible = 0 setget set_mush_edible
 var mush_inedible = 0 setget set_mush_inedible
 
+var tmp_score = 0
+var tmp_edible = 0
+var tmp_inedible = 0
+
 var current_level_path = null
 var save_file_name = "user://mushroomer.save"
 

@@ -7,7 +7,7 @@ margin_top = 47.0
 margin_right = 325.0
 margin_bottom = 80.0
 disabled = true
-text = "Продолжить"
+text = "Continue"
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false

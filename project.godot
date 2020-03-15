@@ -77,6 +77,10 @@ pause={
  ]
 }
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [layer_names]
 
 2d_physics/layer_1="player"
@@ -85,6 +89,13 @@ pause={
 2d_physics/layer_4="world"
 2d_physics/layer_5="enem_sleep"
 
+[locale]
+
+translations=PoolStringArray( "res://locale/ru.po" )
+locale_filter=[ 0, [ "ru" ] ]
+
 [rendering]
 
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=1
 environment/default_environment="res://default_env.tres"

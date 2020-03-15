@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://src/grounds/forest_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=2]
@@ -21,7 +21,7 @@
 [ext_resource path="res://src/levels/Level02.tscn" type="PackedScene" id=19]
 [ext_resource path="res://assets/music/Sound_02855.ogg" type="AudioStream" id=20]
 [ext_resource path="res://assets/bg_forest/Foreground_01.png" type="Texture" id=21]
-[ext_resource path="res://src/objects/PlatformSmall.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/objects/PlatformSmallRight.tscn" type="PackedScene" id=22]
 [ext_resource path="res://src/objects/Back01.tscn" type="PackedScene" id=23]
 [ext_resource path="res://src/objects/DeadTree02.tscn" type="PackedScene" id=24]
 [ext_resource path="res://src/objects/Stone01.tscn" type="PackedScene" id=25]
@@ -33,8 +33,10 @@
 [ext_resource path="res://src/objects/ShrubFife.tscn" type="PackedScene" id=31]
 [ext_resource path="res://src/objects/GrassLong.tscn" type="PackedScene" id=32]
 [ext_resource path="res://src/objects/Chest.tscn" type="PackedScene" id=33]
+[ext_resource path="res://src/levels/Level01.gd" type="Script" id=34]
 
 [node name="Level01" type="Node2D"]
+script = ExtResource( 34 )
 
 [node name="UserInterface" type="CanvasLayer" parent="."]
 layer = 100

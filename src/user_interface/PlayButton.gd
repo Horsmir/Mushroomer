@@ -14,4 +14,4 @@ func _on_button_up():
 
 
 func _get_configuration_warning():
-    return "next_scene_path должен быть установлен для работы кнопки." if next_scene_path == "" else ""
+    return tr("next_scene_path mast be install for woking node") if next_scene_path == "" else ""

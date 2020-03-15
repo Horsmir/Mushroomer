@@ -12,7 +12,7 @@ func _on_Portal_body_entered(body):
 
 
 func _get_configuration_warning():
-    return "Свойство next_scene не может быть пустым" if not next_scene else "" 
+    return tr("The next_scene property cannot be empty") if not next_scene else "" 
 
 
 func teleport():

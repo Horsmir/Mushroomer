@@ -4,6 +4,12 @@ extends Actor
 onready var state_machine = $AnimationTree.get("parameters/playback")
 onready var gun_ray = $GunRay
 
+export var camera_limit_right = 20000
+
+
+func _ready():
+    $Camera2D.limit_right = camera_limit_right
+
 
 func get_input():
     var dir = 0
@@ -33,6 +39,7 @@ func get_input():
     else:
         _velocity.x = lerp(_velocity.x, 0, friction)
         state_machine.travel("idle")
+#        audio_run.stop()
     if sign(dir) != sign($HitBox.position.x) and dir != 0:
         $HitBox.position.x *= -1
         
