@@ -12,3 +12,4 @@ func _ready():
         PlayerData.mush_inedible, 
         PlayerData.deaths,
     ]
+    PlayerData.reset()

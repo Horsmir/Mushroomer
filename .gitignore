@@ -1,3 +1,6 @@
 /.import
 *.import
 *.png~
+/release
+/android
+

@@ -94,3 +94,18 @@ msgstr ""
 
 msgid "Main menu"
 msgstr ""
+
+#: src/screens/SplashLevel.tscn:52
+#, python-format
+msgid "Level 1"
+msgstr ""
+
+msgid "\"Endless forest\""
+msgstr ""
+
+msgid "Level 2"
+msgstr ""
+
+msgid "\"Dense forest\""
+msgstr ""
+

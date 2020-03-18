@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://src/grounds/forest_tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=2]
@@ -18,7 +18,7 @@
 [ext_resource path="res://src/objects/WhiteMushroom_02.tscn" type="PackedScene" id=16]
 [ext_resource path="res://src/objects/DeadTree01.tscn" type="PackedScene" id=17]
 [ext_resource path="res://src/objects/Portal.tscn" type="PackedScene" id=18]
-[ext_resource path="res://src/levels/Level02.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/screens/EndScreen.tscn" type="PackedScene" id=19]
 [ext_resource path="res://assets/music/Sound_02855.ogg" type="AudioStream" id=20]
 [ext_resource path="res://assets/bg_forest/Foreground_01.png" type="Texture" id=21]
 [ext_resource path="res://src/objects/PlatformSmallRight.tscn" type="PackedScene" id=22]
@@ -34,6 +34,7 @@
 [ext_resource path="res://src/objects/GrassLong.tscn" type="PackedScene" id=32]
 [ext_resource path="res://src/objects/Chest.tscn" type="PackedScene" id=33]
 [ext_resource path="res://src/levels/Level01.gd" type="Script" id=34]
+[ext_resource path="res://src/screens/SplashLevel.tscn" type="PackedScene" id=35]
 
 [node name="Level01" type="Node2D"]
 script = ExtResource( 34 )
@@ -42,6 +43,13 @@ script = ExtResource( 34 )
 layer = 100
 
 [node name="UserInterface" parent="UserInterface" instance=ExtResource( 12 )]
+
+[node name="SplashLevel" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="SplashLevel" parent="SplashLevel" instance=ExtResource( 35 )]
+level_num = 1
+level_name = "Endless forest"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_base_scale = Vector2( 0, 0 )
@@ -507,7 +515,7 @@ position = Vector2( 19806, 941.287 )
 next_scene = ExtResource( 19 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 288.253, 909.666 )
+position = Vector2( 273.141, 912.184 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 20 )
