@@ -100,3 +100,17 @@ msgstr "Пауза"
 
 msgid "Main menu"
 msgstr "Главное меню"
+
+#: src/screens/SplashLevel.tscn:52
+#, python-format
+msgid "Level 1"
+msgstr "Уровень 1"
+
+msgid "\"Endless forest\""
+msgstr "\"Бескрайний лес\""
+
+msgid "Level 2"
+msgstr "Уровень 2"
+
+msgid "\"Dense forest\""
+msgstr "\"Дремучий лес\""

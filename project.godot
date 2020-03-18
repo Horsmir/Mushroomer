@@ -23,6 +23,7 @@ _global_script_class_icons={
 config/name="Mushroomer"
 run/main_scene="res://src/screens/MainScreen.tscn"
 config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
@@ -32,7 +33,6 @@ PlayerData="*res://src/autoload/PlayerData.gd"
 
 window/size/width=1920
 window/size/height=1080
-window/size/fullscreen=true
 window/size/always_on_top=true
 window/size/test_width=1080
 window/size/test_height=720
@@ -98,5 +98,4 @@ locale_filter=[ 0, [ "ru" ] ]
 
 quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=1
-vram_compression/import_etc=true
 environment/default_environment="res://default_env.tres"

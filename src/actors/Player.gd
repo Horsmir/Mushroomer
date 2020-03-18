@@ -24,7 +24,7 @@ func get_input():
     var dir = 0
     
     if Input.is_action_just_pressed("shoot"):
-        if PlayerData.mush_inedible > 0 and is_stated:
+        if PlayerData.mush_inedible > 0 and is_stated and not is_jumping:
             is_shooting = true
             anim.play("shoot")
             $AudioGun.play()
