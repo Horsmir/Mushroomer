@@ -114,3 +114,9 @@ msgstr "Уровень 2"
 
 msgid "\"Dense forest\""
 msgstr "\"Дремучий лес\""
+
+msgid "Level 3"
+msgstr "Уровень 3"
+
+msgid "\"Graveyard\""
+msgstr "\"Кладбище\""

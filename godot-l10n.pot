@@ -109,3 +109,8 @@ msgstr ""
 msgid "\"Dense forest\""
 msgstr ""
 
+msgid "Level 3"
+msgstr ""
+
+msgid "\"Graveyard\""
+msgstr ""
