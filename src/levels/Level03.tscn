@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/objects/Portal01.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/user_interface/UserInterface.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/graveyard/bg/bg_2.png" type="Texture" id=8]
 [ext_resource path="res://assets/graveyard/bg/bg_0.png" type="Texture" id=9]
 [ext_resource path="res://assets/graveyard/bg/bg_3.png" type="Texture" id=10]
+[ext_resource path="res://src/actors/WormOne.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=12]
 
 [node name="Level03" type="Node2D"]
@@ -85,3 +86,6 @@ next_scene = ExtResource( 4 )
 [node name="Player" parent="." instance=ExtResource( 12 )]
 position = Vector2( 290.318, 931.241 )
 camera_limit_right = 30200
+
+[node name="WormOne" parent="." instance=ExtResource( 11 )]
+position = Vector2( 2052.06, 1030.42 )

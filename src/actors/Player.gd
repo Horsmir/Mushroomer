@@ -40,7 +40,7 @@ func get_input():
         dir += 1
         anim.flip_h = false
         gun_ray.scale.x = 1
-    if Input.is_action_pressed("move_left"):
+    elif Input.is_action_pressed("move_left"):
         dir -= 1
         anim.flip_h = true
         gun_ray.scale.x = -1
@@ -49,13 +49,14 @@ func get_input():
         if is_on_floor() and not is_jumping:
             is_stated = false
             anim.play("run")
+        if sign(dir) != sign($HitBox.position.x):
+            $HitBox.position.x *= -1
     else:
         _velocity.x = lerp(_velocity.x, 0, friction)
         if is_on_floor() and not is_jumping:
             anim.play("idle")
             is_stated = true
-    if sign(dir) != sign($HitBox.position.x) and dir != 0:
-        $HitBox.position.x *= -1
+    
         
 
 func _physics_process(delta):

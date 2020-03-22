@@ -65,6 +65,11 @@ animations = [ {
 "name": "shoot",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 28 ), ExtResource( 37 ), ExtResource( 44 ), ExtResource( 50 ), ExtResource( 49 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 42 ) ],
+"loop": true,
+"name": "run",
+"speed": 10.0
+}, {
 "frames": [ ExtResource( 27 ), ExtResource( 33 ), ExtResource( 16 ), ExtResource( 39 ), ExtResource( 29 ), ExtResource( 24 ), ExtResource( 30 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 19 ) ],
 "loop": false,
 "name": "dead",
@@ -78,11 +83,6 @@ animations = [ {
 "frames": [ ExtResource( 46 ), ExtResource( 21 ), ExtResource( 17 ), ExtResource( 38 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 43 ), ExtResource( 26 ), ExtResource( 31 ), ExtResource( 25 ) ],
 "loop": false,
 "name": "jump",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 28 ), ExtResource( 37 ), ExtResource( 44 ), ExtResource( 50 ), ExtResource( 49 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 42 ) ],
-"loop": true,
-"name": "run",
 "speed": 10.0
 } ]
 
