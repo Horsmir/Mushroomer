@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://assets/themes/ui_theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/themes/ui_theme_01.tres" type="Theme" id=1]
 [ext_resource path="res://src/user_interface/ChangeSceneButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/user_interface/QuitButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/user_interface/Title.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/user_interface/RetryButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/user_interface/UserInterface.gd" type="Script" id=6]
+[ext_resource path="res://assets/ui_elements/Icon (6).png" type="Texture" id=7]
+[ext_resource path="res://assets/ui_elements/Icon (7).png" type="Texture" id=8]
 
 [node name="UserInterface" type="Control"]
 pause_mode = 2
@@ -13,20 +15,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
 script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="."]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -249.155
-margin_top = 36.9102
-margin_right = -48.1553
-margin_bottom = 129.91
-text = "Очки: %s
-Съедобные: %s
-Несъедобные: %s"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -44,7 +32,7 @@ margin_left = 0.0
 margin_top = 256.318
 margin_right = 0.0
 margin_bottom = 313.318
-text = "Пауза"
+text = "Pause"
 valign = 1
 
 [node name="PauseMenu" type="VBoxContainer" parent="PauseOverlay"]
@@ -53,24 +41,87 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -214.0
-margin_top = -170.5
+margin_top = -170.0
 margin_right = 214.0
-margin_bottom = 170.5
+margin_bottom = 81.0
 
 [node name="RetryButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 5 )]
 margin_right = 428.0
-margin_bottom = 111.0
-text = "Повторить"
+margin_bottom = 81.0
 
 [node name="ChangeSceneButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 2 )]
-margin_top = 115.0
+margin_top = 85.0
 margin_right = 428.0
-margin_bottom = 226.0
-text = "Главный экран"
+margin_bottom = 166.0
+text = "Main menu"
 next_scene_path = "res://src/screens/MainScreen.tscn"
 
 [node name="QuitButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 3 )]
-margin_top = 230.0
+margin_top = 170.0
 margin_right = 428.0
-margin_bottom = 341.0
-text = "Выход"
+margin_bottom = 251.0
+
+[node name="InfoGame" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -219.0
+margin_top = 29.0
+margin_bottom = 99.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="InfoGame"]
+margin_right = 219.0
+margin_bottom = 31.0
+custom_colors/font_color = Color( 1, 1, 0.52, 1 )
+text = "Score: %s"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InfoGame"]
+margin_top = 35.0
+margin_right = 219.0
+margin_bottom = 72.0
+
+[node name="TextureRect" type="TextureRect" parent="InfoGame/HBoxContainer"]
+margin_right = 36.0
+margin_bottom = 37.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="InfoGame/HBoxContainer"]
+margin_left = 40.0
+margin_top = 3.0
+margin_right = 219.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 0.521569, 1 )
+text = "0000"
+valign = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="InfoGame"]
+margin_top = 76.0
+margin_right = 219.0
+margin_bottom = 113.0
+
+[node name="TextureRect" type="TextureRect" parent="InfoGame/HBoxContainer2"]
+margin_right = 36.0
+margin_bottom = 37.0
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="InfoGame/HBoxContainer2"]
+margin_left = 40.0
+margin_top = 3.0
+margin_right = 219.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 0.521569, 1 )
+text = "0000"
+valign = 1

@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/themes/ui_theme_01.tres" type="Theme" id=1]
+[ext_resource path="res://assets/fonts/font_title.tres" type="DynamicFont" id=2]
+[ext_resource path="res://src/screens/SplashLevel.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "fading"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("VBoxContainer:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 393.067 ), Vector2( 0, 393.067 ), Vector2( 0, -127.236 ) ]
+}
+
+[node name="SplashLevel" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "fading"
+anims/fading = SubResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -960.0
+margin_top = 393.067
+margin_right = 960.0
+margin_bottom = 517.067
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NumLevel" type="Label" parent="VBoxContainer"]
+margin_right = 1920.0
+margin_bottom = 60.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 0.521569, 1 )
+text = "Level %s"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelName" type="Label" parent="VBoxContainer"]
+margin_top = 64.0
+margin_right = 1920.0
+margin_bottom = 124.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 0.521569, 1 )
+text = "\"Level name\""
+align = 1
+valign = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

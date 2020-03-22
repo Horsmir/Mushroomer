@@ -12,10 +12,12 @@ func _on_Portal_body_entered(body):
 
 
 func _get_configuration_warning():
-    return "Свойство next_scene не может быть пустым" if not next_scene else "" 
+    return tr("The next_scene property cannot be empty") if not next_scene else "" 
 
 
 func teleport():
     anim_player.play("fade_in")
     yield(anim_player, "animation_finished")
+    PlayerData.current_level_path = next_scene.get_path()
+    PlayerData.save_game()
     get_tree().change_scene_to(next_scene)

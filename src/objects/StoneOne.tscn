@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/forest_objects/Stone_2.png" type="Texture" id=1]
+
+[node name="StoneOne" type="StaticBody2D"]
+collision_layer = 8
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -63.7648, -78.8337, -121.525, 25.856, -136.867, 52.9308, -134.16, 75.4933, -55.6424, 99.8607, 73.4147, 98.9582, 133.882, 87.2257, 138.394, 66.4683, 114.93, 23.1484, 92.3671, -28.2939, 45.4373, -87.8586, 11.1424, -91.4686, -43.9099, -86.0536 )

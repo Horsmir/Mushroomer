@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Звук шипения червя.ogg-008d19d14389409c1a35c1fced967069.oggstr"
+
+[deps]
+
+source_file="res://assets/music/Звук шипения червя.ogg"
+dest_files=[ "res://.import/Звук шипения червя.ogg-008d19d14389409c1a35c1fced967069.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

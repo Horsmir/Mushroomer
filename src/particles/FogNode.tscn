@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/shaders/fog.shader" type="Shader" id=1]
+[ext_resource path="res://assets/bg_forest/tex_fog.png" type="Texture" id=2]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+shader_param/color = Vector3( 0.35, 0.48, 0.95 )
+shader_param/OCTAVES = 4
+
+[node name="FogNode" type="Sprite"]
+material = SubResource( 1 )
+position = Vector2( 1419.37, 1496.71 )
+scale = Vector2( 3.02845, 2.98463 )
+texture = ExtResource( 2 )

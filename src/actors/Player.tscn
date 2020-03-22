@@ -1,272 +1,96 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://assets/music/Sound_16662.ogg" type="AudioStream" id=1]
 [ext_resource path="res://assets/music/Sound_02192.ogg" type="AudioStream" id=2]
+[ext_resource path="res://src/user_interface/TouchScreen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/adventure_girl/idle/Idle (1).png" type="Texture" id=4]
+[ext_resource path="res://assets/adventure_girl/idle/Idle (6).png" type="Texture" id=5]
+[ext_resource path="res://assets/adventure_girl/idle/Idle (2).png" type="Texture" id=6]
+[ext_resource path="res://assets/adventure_girl/idle/Idle (3).png" type="Texture" id=7]
+[ext_resource path="res://assets/adventure_girl/idle/Idle (9).png" type="Texture" id=8]
+[ext_resource path="res://assets/adventure_girl/idle/Idle (10).png" type="Texture" id=9]
+[ext_resource path="res://assets/adventure_girl/idle/Idle (5).png" type="Texture" id=10]
 [ext_resource path="res://src/actors/Player.gd" type="Script" id=11]
-[ext_resource path="res://assets/adventure_girl/adventure_girl_spritesheet.png" type="Texture" id=20]
+[ext_resource path="res://assets/adventure_girl/idle/Idle (8).png" type="Texture" id=12]
+[ext_resource path="res://assets/adventure_girl/idle/Idle (4).png" type="Texture" id=13]
+[ext_resource path="res://assets/adventure_girl/idle/Idle (7).png" type="Texture" id=14]
+[ext_resource path="res://assets/adventure_girl/melee/Melee (2).png" type="Texture" id=15]
+[ext_resource path="res://assets/adventure_girl/dead/Dead (3).png" type="Texture" id=16]
+[ext_resource path="res://assets/adventure_girl/jump/Jump (3).png" type="Texture" id=17]
+[ext_resource path="res://assets/adventure_girl/melee/Melee (3).png" type="Texture" id=18]
+[ext_resource path="res://assets/adventure_girl/dead/Dead (10).png" type="Texture" id=19]
+[ext_resource path="res://assets/adventure_girl/jump/Jump (2).png" type="Texture" id=21]
+[ext_resource path="res://assets/adventure_girl/melee/Melee (4).png" type="Texture" id=22]
+[ext_resource path="res://assets/adventure_girl/melee/Melee (6).png" type="Texture" id=23]
+[ext_resource path="res://assets/adventure_girl/dead/Dead (6).png" type="Texture" id=24]
+[ext_resource path="res://assets/adventure_girl/jump/Jump (10).png" type="Texture" id=25]
+[ext_resource path="res://assets/adventure_girl/jump/Jump (8).png" type="Texture" id=26]
+[ext_resource path="res://assets/adventure_girl/dead/Dead (1).png" type="Texture" id=27]
+[ext_resource path="res://assets/adventure_girl/run/Run (1).png" type="Texture" id=28]
+[ext_resource path="res://assets/adventure_girl/dead/Dead (5).png" type="Texture" id=29]
+[ext_resource path="res://assets/adventure_girl/dead/Dead (7).png" type="Texture" id=30]
+[ext_resource path="res://assets/adventure_girl/jump/Jump (9).png" type="Texture" id=31]
+[ext_resource path="res://assets/adventure_girl/melee/Melee (1).png" type="Texture" id=32]
+[ext_resource path="res://assets/adventure_girl/dead/Dead (2).png" type="Texture" id=33]
+[ext_resource path="res://assets/adventure_girl/melee/Melee (7).png" type="Texture" id=34]
+[ext_resource path="res://assets/adventure_girl/run/Run (7).png" type="Texture" id=35]
+[ext_resource path="res://assets/adventure_girl/run/Run (6).png" type="Texture" id=36]
+[ext_resource path="res://assets/adventure_girl/run/Run (2).png" type="Texture" id=37]
+[ext_resource path="res://assets/adventure_girl/jump/Jump (4).png" type="Texture" id=38]
+[ext_resource path="res://assets/adventure_girl/dead/Dead (4).png" type="Texture" id=39]
+[ext_resource path="res://assets/adventure_girl/dead/Dead (9).png" type="Texture" id=40]
+[ext_resource path="res://assets/adventure_girl/dead/Dead (8).png" type="Texture" id=41]
+[ext_resource path="res://assets/adventure_girl/run/Run (8).png" type="Texture" id=42]
+[ext_resource path="res://assets/adventure_girl/jump/Jump (7).png" type="Texture" id=43]
+[ext_resource path="res://assets/adventure_girl/run/Run (3).png" type="Texture" id=44]
+[ext_resource path="res://assets/adventure_girl/melee/Melee (5).png" type="Texture" id=45]
+[ext_resource path="res://assets/adventure_girl/jump/Jump (1).png" type="Texture" id=46]
+[ext_resource path="res://assets/adventure_girl/jump/Jump (5).png" type="Texture" id=47]
+[ext_resource path="res://assets/adventure_girl/jump/Jump (6).png" type="Texture" id=48]
+[ext_resource path="res://assets/adventure_girl/run/Run (5).png" type="Texture" id=49]
+[ext_resource path="res://assets/adventure_girl/run/Run (4).png" type="Texture" id=50]
+[ext_resource path="res://assets/adventure_girl/shoot/Shoot (2).png" type="Texture" id=51]
+[ext_resource path="res://assets/adventure_girl/shoot/Shoot (1).png" type="Texture" id=52]
+[ext_resource path="res://assets/adventure_girl/shoot/Shoot (3).png" type="Texture" id=53]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 52 ), ExtResource( 51 ), ExtResource( 53 ) ],
+"loop": false,
+"name": "shoot",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 37 ), ExtResource( 44 ), ExtResource( 50 ), ExtResource( 49 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 42 ) ],
+"loop": true,
+"name": "run",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 33 ), ExtResource( 16 ), ExtResource( 39 ), ExtResource( 29 ), ExtResource( 24 ), ExtResource( 30 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 19 ) ],
+"loop": false,
+"name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 22 ), ExtResource( 45 ), ExtResource( 23 ), ExtResource( 34 ) ],
+"loop": false,
+"name": "melee",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 46 ), ExtResource( 21 ), ExtResource( 17 ), ExtResource( 38 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 43 ), ExtResource( 26 ), ExtResource( 31 ), ExtResource( 25 ) ],
+"loop": false,
+"name": "jump",
+"speed": 10.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
 radius = 25.5635
 height = 71.038
 
-[sub_resource type="Animation" id=2]
-resource_name = "die"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 0, 9 ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 2 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "end_die"
-} ]
-}
-
-[sub_resource type="Animation" id=3]
-resource_name = "idle"
-length = 1.5
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 1 ), Vector2( 9, 1 ) ]
-}
-
-[sub_resource type="Animation" id=4]
-resource_name = "jump"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 2 ), Vector2( 9, 2 ) ]
-}
-
-[sub_resource type="Animation" id=5]
-resource_name = "melee"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 30, 36 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("HitBox/CollisionShape2D:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.4, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ true, false, true ]
-}
-tracks/2/type = "method"
-tracks/2/path = NodePath("AudioAttack")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0.3, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"values": [ {
-"args": [ 0.0 ],
-"method": "play"
-}, {
-"args": [  ],
-"method": "stop"
-} ]
-}
-
-[sub_resource type="Animation" id=6]
-resource_name = "run"
-length = 0.5
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 40, 47 ]
-}
-
-[sub_resource type="Animation" id=7]
-resource_name = "shoot"
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 50, 52 ]
-}
-tracks/1/type = "method"
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 1 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "shoot"
-} ]
-}
-tracks/2/type = "method"
-tracks/2/path = NodePath("AudioGun")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"values": [ {
-"args": [ 0.0 ],
-"method": "play"
-}, {
-"args": [  ],
-"method": "stop"
-} ]
-}
-
-[sub_resource type="Animation" id=8]
-resource_name = "slide"
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 60, 64 ]
-}
-
-[sub_resource type="AnimationNodeAnimation" id=9]
-animation = "die"
-
-[sub_resource type="AnimationNodeAnimation" id=10]
-animation = "idle"
-
-[sub_resource type="AnimationNodeAnimation" id=11]
-animation = "jump"
-
-[sub_resource type="AnimationNodeAnimation" id=12]
-animation = "melee"
-
-[sub_resource type="AnimationNodeAnimation" id=13]
-animation = "run"
-
-[sub_resource type="AnimationNodeAnimation" id=14]
-animation = "shoot"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=15]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=16]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=17]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=18]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=19]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=20]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=21]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=22]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=23]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=24]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=25]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=26]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=27]
-switch_mode = 2
-auto_advance = true
-
-[sub_resource type="AnimationNodeStateMachine" id=28]
-states/die/node = SubResource( 9 )
-states/die/position = Vector2( 751, 120 )
-states/idle/node = SubResource( 10 )
-states/idle/position = Vector2( 556, 471 )
-states/jump/node = SubResource( 11 )
-states/jump/position = Vector2( 759, 299 )
-states/melee/node = SubResource( 12 )
-states/melee/position = Vector2( 562, 631 )
-states/run/node = SubResource( 13 )
-states/run/position = Vector2( 1001, 466 )
-states/shoot/node = SubResource( 14 )
-states/shoot/position = Vector2( 304, 466 )
-transitions = [ "idle", "run", SubResource( 15 ), "run", "idle", SubResource( 16 ), "idle", "jump", SubResource( 17 ), "jump", "idle", SubResource( 18 ), "run", "jump", SubResource( 19 ), "jump", "run", SubResource( 20 ), "idle", "die", SubResource( 21 ), "run", "die", SubResource( 22 ), "jump", "die", SubResource( 23 ), "idle", "melee", SubResource( 24 ), "melee", "idle", SubResource( 25 ), "idle", "shoot", SubResource( 26 ), "shoot", "idle", SubResource( 27 ) ]
-start_node = "idle"
-end_node = "die"
-graph_offset = Vector2( 139, -88.094 )
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=29]
-
-[sub_resource type="RectangleShape2D" id=30]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 19.2036, 25.7746 )
 
 [node name="Player" type="KinematicBody2D"]
@@ -277,37 +101,27 @@ jump_speed = -800
 gravity = 2000
 friction = 0.2
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 90
+
+[node name="TouchScreen" parent="CanvasLayer" instance=ExtResource( 3 )]
+
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 limit_left = 0
+limit_right = 20000
 limit_bottom = 1250
 limit_smoothed = true
+smoothing_enabled = true
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 20 )
-vframes = 7
-hframes = 10
-frame = 11
+frames = SubResource( 1 )
+animation = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -9.4466, -8.01101 )
-shape = SubResource( 1 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/die = SubResource( 2 )
-anims/idle = SubResource( 3 )
-anims/jump = SubResource( 4 )
-anims/melee = SubResource( 5 )
-anims/run = SubResource( 6 )
-anims/shoot = SubResource( 7 )
-anims/slide = SubResource( 8 )
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 28 )
-anim_player = NodePath("../AnimationPlayer")
-active = true
-parameters/playback = SubResource( 29 )
+shape = SubResource( 2 )
 
 [node name="HitBox" type="Area2D" parent="."]
 position = Vector2( 41.9429, 19.3583 )
@@ -316,7 +130,7 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-shape = SubResource( 30 )
+shape = SubResource( 3 )
 disabled = true
 
 [node name="GunRay" type="RayCast2D" parent="."]
@@ -331,5 +145,6 @@ stream = ExtResource( 1 )
 stream = ExtResource( 2 )
 
 [node name="Visibility" type="VisibilityNotifier2D" parent="."]
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="area_entered" from="HitBox" to="." method="_on_HitBox_area_entered"]
 [connection signal="screen_exited" from="Visibility" to="." method="_on_VisibilityNotifier2D_screen_exited"]
