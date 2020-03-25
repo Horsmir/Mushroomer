@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Stone_2_nm.png-a5572f959ef659a819bdb2b9f3c59fc6.stex"
+path="res://.import/14.png-5c080443c07b9f932b11b8c08e357fd9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/forest_objects/Stone_2_nm.png"
-dest_files=[ "res://.import/Stone_2_nm.png-a5572f959ef659a819bdb2b9f3c59fc6.stex" ]
+source_file="res://assets/desert/tiles/14.png"
+dest_files=[ "res://.import/14.png-5c080443c07b9f932b11b8c08e357fd9.stex" ]
 
 [params]
 
