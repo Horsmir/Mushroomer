@@ -120,3 +120,15 @@ msgstr "Уровень 3"
 
 msgid "\"Graveyard\""
 msgstr "\"Кладбище\""
+
+msgid "Level 4"
+msgstr "Уровень 4"
+
+msgid "\"Dungeon\""
+msgstr "Подземелье"
+
+msgid "Level 5"
+msgstr "Уровень 5"
+
+msgid "\"Desert\""
+msgstr "Пустыня"
