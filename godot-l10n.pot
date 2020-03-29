@@ -114,3 +114,15 @@ msgstr ""
 
 msgid "\"Graveyard\""
 msgstr ""
+
+msgid "Level 4"
+msgstr ""
+
+msgid "\"Dungeon\""
+msgstr ""
+
+msgid "Level 5"
+msgstr ""
+
+msgid "\"Desert\""
+msgstr ""

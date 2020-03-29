@@ -801,10 +801,6 @@ position = Vector2( 11681.9, 962.711 )
 [node name="Grass_35" parent="Objects" instance=ExtResource( 22 )]
 position = Vector2( 12372.9, 968.863 )
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 233.287, 954.944 )
-camera_limit_right = 30100
-
 [node name="Portal" parent="." instance=ExtResource( 2 )]
 position = Vector2( 29744.7, 941.287 )
 next_scene = ExtResource( 5 )
@@ -869,3 +865,7 @@ speed = 200
 [node name="Wolf_07" parent="Enemies" instance=ExtResource( 39 )]
 position = Vector2( 25785.3, -539.363 )
 speed = 200
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 233.287, 954.944 )
+camera_limit_right = 30100
