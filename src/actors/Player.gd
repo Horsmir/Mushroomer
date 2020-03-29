@@ -24,7 +24,7 @@ func get_input():
     var dir = 0
     
     if Input.is_action_just_pressed("shoot"):
-        if PlayerData.mush_inedible > 0 and is_stated:
+        if PlayerData.mush_inedible > 0 and PlayerData.mush_edible > 0 and is_stated:
             is_shooting = true
             anim.play("shoot")
             $AudioGun.play()
@@ -85,6 +85,7 @@ func attack1():
 
 func shoot():
     PlayerData.mush_inedible -= 1
+    PlayerData.mush_edible -= 1
     if gun_ray.is_colliding():
         var enem = gun_ray.get_collider()
         if enem.has_method("sleeping"):
