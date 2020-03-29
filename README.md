@@ -12,4 +12,8 @@
 
 **W** or **Up arrow** - jump,
 
-**Space** or **E** - Shot.
+**Space** -  cut mushroom,
+
+or **E** - Shot.
+
+For the manufacture of euthanizing bullets, it is necessary: 1 edible mushroom and 1 inedible.
