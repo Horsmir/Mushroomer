@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://src/objects/Portal01.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/user_interface/UserInterface.tscn" type="PackedScene" id=2]
@@ -16,6 +16,11 @@
 [ext_resource path="res://src/objects/PlatformMidRightGr.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/objects/PlatformMidLeftGr.tscn" type="PackedScene" id=15]
 [ext_resource path="res://src/objects/graveyard/Tree.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/objects/graveyard/DeadBush.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/objects/graveyard/TombStoneTwo.tscn" type="PackedScene" id=18]
+[ext_resource path="res://src/objects/graveyard/TombStoneOne.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/objects/graveyard/Skeleton.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/actors/Skeleton.tscn" type="PackedScene" id=21]
 
 [node name="Level03" type="Node2D"]
 
@@ -87,8 +92,14 @@ tile_data = PoolIntArray( -262019, 13, 0, -262018, 14, 0, -262017, 14, 0, -26201
 position = Vector2( 30063.2, 800.812 )
 next_scene = ExtResource( 4 )
 
-[node name="WormOne" parent="." instance=ExtResource( 11 )]
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="WormOne" parent="Enemies" instance=ExtResource( 11 )]
 position = Vector2( 2052.06, 1030.42 )
+
+[node name="Skeleton" parent="Enemies" instance=ExtResource( 21 )]
+position = Vector2( 10173.8, 929.128 )
+speed = 200
 
 [node name="Objects" type="Node2D" parent="."]
 
@@ -113,6 +124,18 @@ position = Vector2( 13111.8, -201.987 )
 [node name="Tree" parent="Objects" instance=ExtResource( 16 )]
 position = Vector2( 914.757, 909.513 )
 
+[node name="DeadBush" parent="Objects" instance=ExtResource( 17 )]
+position = Vector2( 2359.9, 990.87 )
+
+[node name="TombStoneOne" parent="Objects" instance=ExtResource( 19 )]
+position = Vector2( 5784.81, 998.923 )
+
+[node name="TombStoneTwo" parent="Objects" instance=ExtResource( 18 )]
+position = Vector2( 6522.99, 860.766 )
+
+[node name="Skeleton" parent="Objects" instance=ExtResource( 20 )]
+position = Vector2( 7329.39, 749.767 )
+
 [node name="Player" parent="." instance=ExtResource( 12 )]
-position = Vector2( 290.318, 931.241 )
+position = Vector2( 224.437, 947.479 )
 camera_limit_right = 30200

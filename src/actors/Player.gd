@@ -119,3 +119,8 @@ func _on_AnimatedSprite_animation_finished():
         is_jumping = false
     if anim.animation == "dead":
         end_die()
+
+
+func _on_HitBox_body_entered(body):
+    if body.has_method("die"):
+        body.die()
