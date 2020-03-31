@@ -28,12 +28,14 @@ func _physics_process(delta):
 
 
 func _on_AttackBox_body_entered(body):
+    vel = _velocity.x
     _velocity.x = 0
     yield(get_tree().create_timer(0.5), "timeout")
+    anim.play("attack")
+    yield(anim, "animation_finished")
     if not dead:
-        anim.play("attack")
-        yield(anim, "animation_finished")
-        anim.play("idle")
+        _velocity.x = vel
+        anim.play("walk")
 
 
 func _on_HitBox_body_entered(body):
@@ -42,14 +44,12 @@ func _on_HitBox_body_entered(body):
 
 func die():
     dead = true
-    anim.stop()
     anim.play("die")
     $DieTimer.start()
     scale_pos = scale.x
     hit_pos = $HitBox.position.x
     attack_pos = $AttackBox.position.x
     col_pos = $CollisionShape2D.position.x
-    vel = _velocity.x
 
 
 func _on_DieTimer_timeout():

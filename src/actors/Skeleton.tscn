@@ -45,17 +45,17 @@
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 23 ), ExtResource( 19 ), ExtResource( 33 ), ExtResource( 28 ), ExtResource( 39 ), ExtResource( 41 ) ],
-"loop": true,
+"loop": false,
 "name": "idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 24 ), ExtResource( 26 ), ExtResource( 25 ), ExtResource( 20 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 29 ), ExtResource( 30 ) ],
-"loop": true,
+"loop": false,
 "name": "die",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 2 ), ExtResource( 9 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
-"loop": true,
+"loop": false,
 "name": "walk",
 "speed": 5.0
 }, {
@@ -65,7 +65,7 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 21 ), ExtResource( 18 ), ExtResource( 22 ), ExtResource( 27 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 40 ) ],
-"loop": true,
+"loop": false,
 "name": "appear",
 "speed": 5.0
 } ]
@@ -301,19 +301,20 @@ extents = Vector2( 25.194, 32.5338 )
 
 [node name="Skeleton" type="KinematicBody2D"]
 collision_layer = 2
-collision_mask = 9
+collision_mask = 41
 script = ExtResource( 17 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
-animation = "walk"
+animation = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 9.75348, 7.70012 )
 shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "idle"
 anims/appear = SubResource( 9 )
 anims/attack = SubResource( 3 )
 anims/die = SubResource( 4 )
@@ -340,6 +341,12 @@ disabled = true
 [node name="DieTimer" type="Timer" parent="."]
 wait_time = 5.0
 one_shot = true
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 26.2595, -2.9618 )
+scale = Vector2( 5.34754, 8.95241 )
+process_parent = true
+physics_process_parent = true
 [connection signal="body_entered" from="AttackBox" to="." method="_on_AttackBox_body_entered"]
 [connection signal="body_entered" from="HitBox" to="." method="_on_HitBox_body_entered"]
 [connection signal="timeout" from="DieTimer" to="." method="_on_DieTimer_timeout"]

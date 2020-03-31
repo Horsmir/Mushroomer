@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/dungeon/bg.png" type="Texture" id=1]
 [ext_resource path="res://assets/tile_sets/graveyard_tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/themes/ui_theme_01.tres" type="Theme" id=4]
-[ext_resource path="res://src/screens/SplashLevel.gd" type="Script" id=5]
+[ext_resource path="res://assets/music/мистичная тема.ogg" type="AudioStream" id=4]
 [ext_resource path="res://src/user_interface/UserInterface.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/screens/SplashLevel.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/levels/Level05.tscn" type="PackedScene" id=8]
@@ -20,14 +19,7 @@ layer = 100
 [node name="SplashLevel" type="CanvasLayer" parent="."]
 layer = 100
 
-[node name="SplashLevel" type="Control" parent="SplashLevel" instance=ExtResource( 7 )]
-anchor_right = 1.0
-anchor_bottom = 1.0
-theme = ExtResource( 4 )
-script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="SplashLevel" parent="SplashLevel" instance=ExtResource( 7 )]
 level_num = 4
 level_name = "Dungeon"
 
@@ -53,3 +45,7 @@ position = Vector2( 132.465, 576.613 )
 [node name="Portal" parent="." instance=ExtResource( 9 )]
 position = Vector2( 19957.9, 158.026 )
 next_scene = ExtResource( 8 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
