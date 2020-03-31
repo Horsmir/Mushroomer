@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://assets/enimies/worm/walk_02.png" type="Texture" id=1]
 [ext_resource path="res://assets/enimies/worm/walk_03.png" type="Texture" id=2]
@@ -24,25 +24,25 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 13 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 4 ), ExtResource( 16 ), ExtResource( 3 ), ExtResource( 5 ) ],
-"loop": false,
-"name": "attack",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 9 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 12 ) ],
 "loop": false,
 "name": "walk",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 4 ), ExtResource( 16 ), ExtResource( 3 ), ExtResource( 5 ) ],
+"loop": false,
+"name": "attack",
 "speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 26.2482, 24.9405 )
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 58.4434, 19.505 )
-
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 174.263, 19.505 )
+extents = Vector2( 24.576, 19.505 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 233.711, 19.505 )
 
 [sub_resource type="Animation" id=5]
 resource_name = "attack"
@@ -72,36 +72,24 @@ tracks/1/keys = {
 "values": [ 0, 8 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("CollisionShape2D:disabled")
+tracks/2/path = NodePath("AttackBox/CollisionShape2D:disabled")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ true, false ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath("HitBox/CollisionShape2D:disabled")
+tracks/3/type = "method"
+tracks/3/path = NodePath("AudioAttack")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.6 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/4/type = "method"
-tracks/4/path = NodePath("AudioAttack")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
 "times": PoolRealArray( 0, 0.6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "values": [ {
@@ -111,6 +99,18 @@ tracks/4/keys = {
 "args": [  ],
 "method": "stop"
 } ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HitBox/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -139,25 +139,13 @@ tracks/1/keys = {
 "update": 1,
 "values": [ "walk", "walk" ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("CollisionShape2D:disabled")
+tracks/2/type = "method"
+tracks/2/path = NodePath("AudioEnter")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-tracks/3/type = "method"
-tracks/3/path = NodePath("AudioEnter")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "values": [ {
@@ -195,25 +183,13 @@ tracks/1/keys = {
 "update": 0,
 "values": [ 8, 0 ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("CollisionShape2D:disabled")
+tracks/2/type = "method"
+tracks/2/path = NodePath("AudioEnter")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/3/type = "method"
-tracks/3/path = NodePath("AudioEnter")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "values": [ {
@@ -224,6 +200,9 @@ tracks/3/keys = {
 "method": "stop"
 } ]
 }
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 5.76064, 19.9233 )
 
 [node name="WormOne" type="KinematicBody2D"]
 collision_layer = 2
@@ -238,14 +217,14 @@ offset = Vector2( -11.4063, -25.2847 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -18.3973, -24.6691 )
 shape = SubResource( 2 )
-disabled = true
 
-[node name="HitBox" type="Area2D" parent="."]
+[node name="AttackBox" type="Area2D" parent="."]
+monitorable = false
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2( 0, -16.7248 )
-shape = SubResource( 4 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox"]
+position = Vector2( -52, -16.725 )
+shape = SubResource( 3 )
 
 [node name="ScanBox" type="Area2D" parent="."]
 monitorable = false
@@ -253,7 +232,7 @@ collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ScanBox"]
 position = Vector2( 0, -16.7248 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/attack = SubResource( 5 )
@@ -265,6 +244,16 @@ stream = ExtResource( 20 )
 
 [node name="AudioAttack" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 21 )
-[connection signal="body_entered" from="HitBox" to="." method="_on_HitBox_body_entered"]
+
+[node name="HitBox" type="Area2D" parent="."]
+monitorable = false
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2( -71, -16.725 )
+shape = SubResource( 8 )
+disabled = true
+[connection signal="body_entered" from="AttackBox" to="." method="_on_AttackBox_body_entered"]
 [connection signal="body_entered" from="ScanBox" to="." method="_on_ScanBox_body_entered"]
 [connection signal="body_exited" from="ScanBox" to="." method="_on_ScanBox_body_exited"]
+[connection signal="body_entered" from="HitBox" to="." method="_on_HitBox_body_entered"]

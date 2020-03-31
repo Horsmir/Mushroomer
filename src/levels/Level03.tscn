@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://src/objects/Portal01.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/user_interface/UserInterface.tscn" type="PackedScene" id=2]
@@ -23,6 +23,16 @@
 [ext_resource path="res://src/actors/Skeleton.tscn" type="PackedScene" id=21]
 [ext_resource path="res://assets/music/мистичная тема.ogg" type="AudioStream" id=22]
 [ext_resource path="res://src/objects/triggers/EnemyTrigger.tscn" type="PackedScene" id=23]
+[ext_resource path="res://src/objects/StoneOne.tscn" type="PackedScene" id=24]
+[ext_resource path="res://src/objects/StoneTwo.tscn" type="PackedScene" id=25]
+[ext_resource path="res://src/objects/Stone01.tscn" type="PackedScene" id=26]
+[ext_resource path="res://src/objects/Fly-agaric_02.tscn" type="PackedScene" id=27]
+[ext_resource path="res://src/objects/WhiteMushroom_01.tscn" type="PackedScene" id=28]
+[ext_resource path="res://src/objects/Fly-agaric.tscn" type="PackedScene" id=29]
+[ext_resource path="res://src/objects/Fly-agaric_01.tscn" type="PackedScene" id=30]
+[ext_resource path="res://src/objects/WhiteMushroom.tscn" type="PackedScene" id=31]
+[ext_resource path="res://src/objects/WhiteMushroom_02.tscn" type="PackedScene" id=32]
+[ext_resource path="res://src/objects/Chest.tscn" type="PackedScene" id=33]
 
 [node name="Level03" type="Node2D"]
 
@@ -93,55 +103,6 @@ tile_data = PoolIntArray( -262019, 13, 0, -262018, 14, 0, -262017, 14, 0, -26201
 [node name="Portal" parent="." instance=ExtResource( 1 )]
 position = Vector2( 30063.2, 800.812 )
 next_scene = ExtResource( 4 )
-
-[node name="Enemies" type="Node2D" parent="."]
-
-[node name="WormOne" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( 2052.06, 1030.42 )
-
-[node name="WormOne3" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( 5971.86, 648.122 )
-
-[node name="WormOne4" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( 7478.3, 772.703 )
-
-[node name="WormOne5" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( 9226.67, 1028.14 )
-
-[node name="WormOne6" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( 11492.9, 772.703 )
-
-[node name="WormOne8" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( 15115.6, -251.356 )
-
-[node name="WormOne9" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( 16278.4, 388.973 )
-
-[node name="WormOne10" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( 18334.7, 519.605 )
-
-[node name="WormOne11" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( 19753, 137.04 )
-
-[node name="WormOne12" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( 23295.8, 901.187 )
-
-[node name="WormOne13" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( 25472.6, 1031.33 )
-
-[node name="WormOne14" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( 26381.1, 389.219 )
-
-[node name="WormOne15" parent="Enemies" instance=ExtResource( 11 )]
-position = Vector2( 27492.2, 1031.33 )
-
-[node name="Skeleton" parent="Enemies" instance=ExtResource( 21 )]
-position = Vector2( 10173.8, 929.128 )
-speed = 200
-
-[node name="Skeleton2" parent="Enemies" instance=ExtResource( 21 )]
-position = Vector2( 11577.3, 690.042 )
-speed = 200
 
 [node name="Objects" type="Node2D" parent="."]
 
@@ -505,11 +466,315 @@ position = Vector2( 29644.6, 864.643 )
 [node name="Skeleton" parent="Objects" instance=ExtResource( 20 )]
 position = Vector2( 7329.39, 749.767 )
 
+[node name="Skeleton2" parent="Objects" instance=ExtResource( 20 )]
+position = Vector2( 11159.9, -14.9084 )
+
 [node name="EnemyTrigger" parent="Objects" instance=ExtResource( 23 )]
 position = Vector2( 10799.3, 781.524 )
 
+[node name="EnemyTrigger2" parent="Objects" instance=ExtResource( 23 )]
+position = Vector2( 13848, -114.893 )
+
+[node name="EnemyTrigger3" parent="Objects" instance=ExtResource( 23 )]
+position = Vector2( 14694.3, -116.325 )
+
+[node name="EnemyTrigger4" parent="Objects" instance=ExtResource( 23 )]
+position = Vector2( 17516.7, 522.336 )
+
+[node name="EnemyTrigger5" parent="Objects" instance=ExtResource( 23 )]
+position = Vector2( 25053.4, 912.738 )
+
+[node name="StoneOne" parent="Objects" instance=ExtResource( 24 )]
+position = Vector2( 1419.5, 947.509 )
+
+[node name="StoneTwo" parent="Objects" instance=ExtResource( 25 )]
+position = Vector2( 3368.42, 492.14 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Stone01" parent="Objects" instance=ExtResource( 26 )]
+position = Vector2( 4111.61, 98.3466 )
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="WhiteMushroom" parent="Coins" instance=ExtResource( 31 )]
+position = Vector2( 1252.1, 994.85 )
+
+[node name="WhiteMushroom4" parent="Coins" instance=ExtResource( 31 )]
+position = Vector2( 6168.24, 614.897 )
+
+[node name="WhiteMushroom7" parent="Coins" instance=ExtResource( 31 )]
+position = Vector2( 7740.83, 359.146 )
+
+[node name="WhiteMushroom13" parent="Coins" instance=ExtResource( 31 )]
+position = Vector2( 10337, 999.239 )
+
+[node name="WhiteMushroom15" parent="Coins" instance=ExtResource( 31 )]
+position = Vector2( 12718.5, 360.76 )
+
+[node name="WhiteMushroom18" parent="Coins" instance=ExtResource( 31 )]
+position = Vector2( 14081.4, -153.657 )
+
+[node name="WhiteMushroom22" parent="Coins" instance=ExtResource( 31 )]
+position = Vector2( 15589.6, 359.09 )
+
+[node name="WhiteMushroom28" parent="Coins" instance=ExtResource( 31 )]
+position = Vector2( 19870.3, 487.694 )
+
+[node name="WhiteMushroom30" parent="Coins" instance=ExtResource( 31 )]
+position = Vector2( 21361.7, 744.903 )
+
+[node name="WhiteMushroom33" parent="Coins" instance=ExtResource( 31 )]
+position = Vector2( 22959.8, 871.486 )
+
+[node name="WhiteMushroom35" parent="Coins" instance=ExtResource( 31 )]
+position = Vector2( 24174.7, 873.244 )
+
+[node name="WhiteMushroom36" parent="Coins" instance=ExtResource( 31 )]
+position = Vector2( 24837.5, 869.728 )
+
+[node name="WhiteMushroom8" parent="Coins" instance=ExtResource( 31 )]
+position = Vector2( 7344.96, 355.065 )
+
+[node name="WhiteMushroom9" parent="Coins" instance=ExtResource( 31 )]
+position = Vector2( 7780.29, 99.3138 )
+
+[node name="WhiteMushroom2" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 2909.4, 739.333 )
+
+[node name="WhiteMushroom5" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 6038.2, 993.927 )
+
+[node name="WhiteMushroom11" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 10062.1, 997.651 )
+
+[node name="WhiteMushroom12" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 10962.8, 739.895 )
+
+[node name="WhiteMushroom14" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 11807.7, 742.759 )
+
+[node name="WhiteMushroom17" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 13394.4, 100.155 )
+
+[node name="WhiteMushroom19" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 14545.1, -153.714 )
+
+[node name="WhiteMushroom23" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 16631.2, 357.363 )
+
+[node name="WhiteMushroom25" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 18101, 489.308 )
+
+[node name="WhiteMushroom26" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 18810.8, 614.572 )
+
+[node name="WhiteMushroom27" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 19198.3, 612.902 )
+
+[node name="WhiteMushroom29" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 20576.2, 616.242 )
+
+[node name="WhiteMushroom31" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 22124.4, 741.506 )
+
+[node name="WhiteMushroom37" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 27690.6, 1003.46 )
+
+[node name="WhiteMushroom38" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 29123.4, 999.945 )
+
+[node name="WhiteMushroom21" parent="Coins" instance=ExtResource( 28 )]
+position = Vector2( 15273.3, -277.308 )
+
+[node name="WhiteMushroom3" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 2409.18, 996.076 )
+
+[node name="WhiteMushroom6" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 7600.38, 745.767 )
+
+[node name="WhiteMushroom39" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 8395.99, -17.0382 )
+
+[node name="WhiteMushroom40" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 9622.22, -21.1393 )
+
+[node name="WhiteMushroom41" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 9940.06, -23.1899 )
+
+[node name="WhiteMushroom42" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 10542.9, -144.172 )
+
+[node name="WhiteMushroom43" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 11437, -21.1393 )
+
+[node name="WhiteMushroom44" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 16159.7, -530.539 )
+
+[node name="WhiteMushroom45" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 16854.7, -407.506 )
+
+[node name="WhiteMushroom46" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 17206.6, -407.506 )
+
+[node name="WhiteMushroom47" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 17638.3, -403.189 )
+
+[node name="WhiteMushroom48" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 17981.5, -398.872 )
+
+[node name="WhiteMushroom49" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 18894.5, 104.052 )
+
+[node name="WhiteMushroom50" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 19013.2, 104.052 )
+
+[node name="WhiteMushroom51" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 20357.9, -403.189 )
+
+[node name="WhiteMushroom52" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 21655.2, -277.998 )
+
+[node name="WhiteMushroom10" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 9604.21, 870.921 )
+
+[node name="WhiteMushroom16" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 13052.1, 229.904 )
+
+[node name="WhiteMushroom20" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 14416.6, -152.569 )
+
+[node name="WhiteMushroom24" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 17035.5, 488.783 )
+
+[node name="WhiteMushroom32" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 22592.8, 872.047 )
+
+[node name="WhiteMushroom34" parent="Coins" instance=ExtResource( 32 )]
+position = Vector2( 23501.7, 875.563 )
+
+[node name="Fly-agaric" parent="Coins" instance=ExtResource( 29 )]
+position = Vector2( 3646.46, 355.874 )
+
+[node name="Fly-agaric2" parent="Coins" instance=ExtResource( 30 )]
+position = Vector2( 3931.07, 230.487 )
+
+[node name="Fly-agaric5" parent="Coins" instance=ExtResource( 30 )]
+position = Vector2( 9051.52, 100.855 )
+
+[node name="Fly-agaric6" parent="Coins" instance=ExtResource( 30 )]
+position = Vector2( 11984.8, 614.86 )
+
+[node name="Fly-agaric8" parent="Coins" instance=ExtResource( 30 )]
+position = Vector2( 15044.6, 107.123 )
+
+[node name="Fly-agaric3" parent="Coins" instance=ExtResource( 27 )]
+position = Vector2( 4295.29, -26.2574 )
+
+[node name="Fly-agaric4" parent="Coins" instance=ExtResource( 27 )]
+position = Vector2( 6877.42, 868.055 )
+
+[node name="Fly-agaric7" parent="Coins" instance=ExtResource( 27 )]
+position = Vector2( 13576.5, -23.8251 )
+
+[node name="Fly-agaric9" parent="Coins" instance=ExtResource( 27 )]
+position = Vector2( 17370, 489.815 )
+
+[node name="Fly-agaric10" parent="Coins" instance=ExtResource( 27 )]
+position = Vector2( 20201.5, 489.815 )
+
+[node name="Fly-agaric11" parent="Coins" instance=ExtResource( 27 )]
+position = Vector2( 21050.9, 741.5 )
+
+[node name="Fly-agaric12" parent="Coins" instance=ExtResource( 27 )]
+position = Vector2( 25892.1, 1002.44 )
+
+[node name="Chest" parent="Coins" instance=ExtResource( 33 )]
+position = Vector2( 4806.68, -438.225 )
+
+[node name="Chest2" parent="Coins" instance=ExtResource( 33 )]
+position = Vector2( 12104, -438.225 )
+
+[node name="Chest3" parent="Coins" instance=ExtResource( 33 )]
+position = Vector2( 18740.8, -570.177 )
+
+[node name="Chest4" parent="Coins" instance=ExtResource( 33 )]
+position = Vector2( 27260.8, 200.83 )
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="WormOne" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 2052.06, 1030.42 )
+
+[node name="WormOne3" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 5971.86, 648.122 )
+
+[node name="WormOne4" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 7478.3, 772.703 )
+
+[node name="WormOne5" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 9226.67, 1028.14 )
+
+[node name="WormOne6" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 11492.9, 772.703 )
+
+[node name="WormOne8" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 15115.6, -251.356 )
+
+[node name="WormOne9" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 16278.4, 388.973 )
+
+[node name="WormOne10" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 18334.7, 519.605 )
+
+[node name="WormOne11" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 19753, 137.04 )
+
+[node name="WormOne12" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 23295.8, 901.187 )
+
+[node name="WormOne13" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 25472.6, 1031.33 )
+
+[node name="WormOne14" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 26381.1, 389.219 )
+
+[node name="WormOne15" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 27492.2, 1031.33 )
+
+[node name="Skeleton" parent="Enemies" instance=ExtResource( 21 )]
+position = Vector2( 10173.8, 929.128 )
+speed = 200
+
+[node name="Skeleton2" parent="Enemies" instance=ExtResource( 21 )]
+position = Vector2( 11577.3, 690.042 )
+speed = 200
+
+[node name="Skeleton3" parent="Enemies" instance=ExtResource( 21 )]
+position = Vector2( 14312.4, -219.263 )
+speed = 200
+
+[node name="Skeleton4" parent="Enemies" instance=ExtResource( 21 )]
+position = Vector2( 17197.8, 425.126 )
+speed = 200
+
+[node name="Skeleton5" parent="Enemies" instance=ExtResource( 21 )]
+position = Vector2( 19036.5, 546.844 )
+speed = 200
+
+[node name="Skeleton6" parent="Enemies" instance=ExtResource( 21 )]
+position = Vector2( 22749.9, 795.707 )
+speed = 200
+
+[node name="Skeleton7" parent="Enemies" instance=ExtResource( 21 )]
+position = Vector2( 24613, 791.185 )
+speed = 200
+
+[node name="Skeleton8" parent="Enemies" instance=ExtResource( 21 )]
+position = Vector2( 29315.9, 931.368 )
+speed = 200
+
 [node name="Player" parent="." instance=ExtResource( 12 )]
-position = Vector2( 12089.6, 555.894 )
+position = Vector2( 262.915, 957.874 )
 camera_limit_right = 30200
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
