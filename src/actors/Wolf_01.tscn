@@ -1020,7 +1020,8 @@ scale = Vector2( 9.79079, 12.986 )
 process_parent = true
 physics_process_parent = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
+area_mask = 2
 [connection signal="body_entered" from="HitBox" to="." method="_on_HitBox_body_entered"]
 [connection signal="timeout" from="TimerSleep" to="." method="_on_TimerSleep_timeout"]

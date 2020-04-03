@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/скелет рассыпается на землю.ogg-9a8d2b128420d90ad52c34f15a4ac310.oggstr"
+
+[deps]
+
+source_file="res://assets/music/скелет рассыпается на землю.ogg"
+dest_files=[ "res://.import/скелет рассыпается на землю.ogg-9a8d2b128420d90ad52c34f15a4ac310.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

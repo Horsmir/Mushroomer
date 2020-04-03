@@ -60,14 +60,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 52 ), ExtResource( 51 ), ExtResource( 53 ) ],
-"loop": false,
-"name": "shoot",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 27 ), ExtResource( 33 ), ExtResource( 16 ), ExtResource( 39 ), ExtResource( 29 ), ExtResource( 24 ), ExtResource( 30 ), ExtResource( 41 ), ExtResource( 40 ), ExtResource( 19 ) ],
 "loop": false,
 "name": "dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 52 ), ExtResource( 51 ), ExtResource( 53 ) ],
+"loop": false,
+"name": "shoot",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 28 ), ExtResource( 37 ), ExtResource( 44 ), ExtResource( 50 ), ExtResource( 49 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 42 ) ],
@@ -414,7 +414,7 @@ smoothing_enabled = true
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 1 )
 animation = "idle"
-frame = 4
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -9.4466, -8.01101 )

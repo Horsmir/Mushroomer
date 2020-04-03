@@ -2,6 +2,7 @@ extends "res://src/actors/Actor.gd"
 
 
 onready var anim = $AnimationPlayer
+onready var audio_move = $AudioMove
 
 var dead = false
 var scale_pos = 0.0
@@ -14,6 +15,7 @@ var vel = 0.0
 func _ready():
     _velocity.x = -speed
     anim.play("walk")
+    audio_move.play()
 
 
 func _physics_process(delta):
@@ -28,6 +30,7 @@ func _physics_process(delta):
 
 
 func _on_AttackBox_body_entered(body):
+    audio_move.stop()
     vel = _velocity.x
     _velocity.x = 0
     yield(get_tree().create_timer(0.5), "timeout")
@@ -36,6 +39,7 @@ func _on_AttackBox_body_entered(body):
     if not dead:
         _velocity.x = vel
         anim.play("walk")
+        audio_move.play()
 
 
 func _on_HitBox_body_entered(body):
@@ -44,6 +48,7 @@ func _on_HitBox_body_entered(body):
 
 func die():
     dead = true
+    audio_move.stop()
     anim.play("die")
     $DieTimer.start()
     scale_pos = scale.x
@@ -62,4 +67,5 @@ func _on_DieTimer_timeout():
     $AttackBox.position.x = attack_pos
     $CollisionShape2D.position.x = col_pos
     anim.play("walk")
+    audio_move.play()
     
