@@ -22,7 +22,6 @@ func get_input():
     if Input.is_action_just_pressed("shoot"):
         if PlayerData.mush_inedible > 0 and PlayerData.mush_edible > 0:
             anim.travel("shoot")
-            shoot()
         return
     
     if Input.is_action_just_pressed("attack1"):
