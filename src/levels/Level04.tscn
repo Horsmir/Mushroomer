@@ -326,5 +326,5 @@ position = Vector2( 12354.9, 261.813 )
 position = Vector2( 15286.7, 518.951 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 141.739, 579.818 )
+position = Vector2( 144.128, 582.209 )
 [connection signal="button_activated" from="ObjectsBehind/ButtonStoneGr" to="." method="_on_ButtonStoneGr_button_activated"]
