@@ -14,6 +14,23 @@
 
 **Space** -  cut mushroom,
 
-or **E** - Shot.
+**E** - Shot,
+
+**Esc** - Pause.
 
 For the manufacture of euthanizing bullets, it is necessary: 1 edible mushroom and 1 inedible.
+
+## Installation
+
+### Source
+
+```bash
+$ git clone https://github.com/Horsmir/Mushroomer.git
+```
+
+Next, import the project into Godot.
+
+### Executables
+
+Files ready for launch can be downloaded [here](https://github.com/Horsmir/Mushroomer/wiki/Releases).
+

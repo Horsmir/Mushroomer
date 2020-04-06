@@ -125,10 +125,10 @@ msgid "Level 4"
 msgstr "Уровень 4"
 
 msgid "\"Dungeon\""
-msgstr "Подземелье"
+msgstr "\"Подземелье\""
 
 msgid "Level 5"
-msgstr "Уровень 5"
+msgstr "\"Уровень 5\""
 
 msgid "\"Desert\""
-msgstr "Пустыня"
+msgstr "\"Пустыня\""
