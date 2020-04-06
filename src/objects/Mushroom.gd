@@ -12,6 +12,5 @@ func take():
         PlayerData.mush_edible += 1
     else:
         PlayerData.mush_inedible += 1
-        PlayerData.mush_edible -= 1
     yield($AnimationPlayer, "animation_finished")
     queue_free()

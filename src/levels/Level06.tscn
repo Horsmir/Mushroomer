@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/desert/bg_2/1.png" type="Texture" id=1]
 [ext_resource path="res://assets/desert/bg_2/4.png" type="Texture" id=2]
@@ -6,13 +6,9 @@
 [ext_resource path="res://assets/desert/bg_2/2.png" type="Texture" id=4]
 [ext_resource path="res://assets/desert/bg_2/3.png" type="Texture" id=5]
 [ext_resource path="res://src/grounds/desert_tiles.tres" type="TileSet" id=6]
-[ext_resource path="res://assets/themes/ui_theme_01.tres" type="Theme" id=7]
-[ext_resource path="res://src/user_interface/UserInterface.gd" type="Script" id=8]
 [ext_resource path="res://src/user_interface/UserInterface.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=10]
-[ext_resource path="res://src/screens/SplashLevel.gd" type="Script" id=11]
 [ext_resource path="res://src/screens/SplashLevel.tscn" type="PackedScene" id=12]
-[ext_resource path="res://src/objects/Portal.gd" type="Script" id=13]
 [ext_resource path="res://src/screens/EndScreen.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/objects/Portal01.tscn" type="PackedScene" id=15]
 
@@ -21,27 +17,12 @@
 [node name="UserInterface" type="CanvasLayer" parent="."]
 layer = 100
 
-[node name="UserInterface" type="Control" parent="UserInterface" instance=ExtResource( 9 )]
-pause_mode = 2
-anchor_right = 1.0
-anchor_bottom = 1.0
-theme = ExtResource( 7 )
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="UserInterface" parent="UserInterface" instance=ExtResource( 9 )]
 
 [node name="SplashLevel" type="CanvasLayer" parent="."]
 layer = 100
 
-[node name="SplashLevel" type="Control" parent="SplashLevel" instance=ExtResource( 12 )]
-anchor_right = 1.0
-anchor_bottom = 1.0
-theme = ExtResource( 7 )
-script = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="SplashLevel" parent="SplashLevel" instance=ExtResource( 12 )]
 level_num = 6
 level_name = "Still desert"
 
@@ -103,10 +84,6 @@ tile_data = PoolIntArray( 131071, 1, 0, 65536, 2, 0, 65771, 0, 0, 65772, 1, 0, 1
 [node name="Player" parent="." instance=ExtResource( 10 )]
 position = Vector2( 234.13, 901.276 )
 
-[node name="Portal" type="Area2D" parent="." instance=ExtResource( 15 )]
+[node name="Portal" parent="." instance=ExtResource( 15 )]
 position = Vector2( 30049.7, 927.657 )
-monitorable = false
-collision_layer = 0
-script = ExtResource( 13 )
 next_scene = ExtResource( 14 )
-[connection signal="body_entered" from="Portal" to="Portal" method="_on_Portal_body_entered"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/рык.ogg-9f792bf5d1c16724ef0bb3ba56bfc0e5.oggstr"
+
+[deps]
+
+source_file="res://assets/music/рык.ogg"
+dest_files=[ "res://.import/рык.ogg-9f792bf5d1c16724ef0bb3ba56bfc0e5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

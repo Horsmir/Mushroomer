@@ -85,6 +85,7 @@ pause={
 2d_physics/layer_3="coins"
 2d_physics/layer_4="world"
 2d_physics/layer_5="enem_sleep"
+2d_physics/layer_6="enemy_wall"
 
 [locale]
 
